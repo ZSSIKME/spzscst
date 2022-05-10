@@ -1,0 +1,25 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: actservice
+  datasource:
+    url: jdbc:mysql://localhost:3306/stglxt?serverTimezone=UTC
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://127.0.0.1:10086/eureka
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+logging:
+  level:
+    com.spz: debug
+  pattern:
+    dateformat:MM-dd HH:mm:ss:SSS
